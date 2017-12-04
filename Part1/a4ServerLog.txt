@@ -1,0 +1,72 @@
+Message: DELETE FROM classics WHERE author="Mark Twain"
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:25:54)
+Message: UPDATE classics SET author="*** UNKNOWN ***" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:25:56)
+Message: INSERT INTO `classics` (`author`,`title`,`category`,`year`,`isbn`) VALUES('Mark Twain','The Adventures of Tom Sawyer', 'Fiction', '1876','9781598184891'); 
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:25:56)
+Message: UPDATE classics SET author="Herman Melville" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:25:58)
+Message: select * from classics;
+
+PID: 47501 Thread ID: 2413790976
+2017-12-3 18:25:58)
+Message: DELETE FROM classics WHERE author="Mark Twain"
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:25:58)
+Message: UPDATE classics SET author="*** UNKNOWN ***" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:26:0)
+Message: INSERT INTO `classics` (`author`,`title`,`category`,`year`,`isbn`) VALUES('Mark Twain','The Adventures of Tom Sawyer', 'Fiction', '1876','9781598184891'); 
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:26:0)
+Message: UPDATE classics SET author="Herman Melville" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:26:2)
+Message: DELETE FROM classics WHERE author="Mark Twain"
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:26:2)
+Message: UPDATE classics SET author="*** UNKNOWN ***" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:26:4)
+Message: INSERT INTO `classics` (`author`,`title`,`category`,`year`,`isbn`) VALUES('Mark Twain','The Adventures of Tom Sawyer', 'Fiction', '1876','9781598184891'); 
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:26:4)
+Message: UPDATE classics SET author="Herman Melville" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:26:6)
+Message: DELETE FROM classics WHERE author="Mark Twain"
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:26:6)
+Message: UPDATE classics SET author="*** UNKNOWN ***" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:26:8)
+Message: INSERT INTO `classics` (`author`,`title`,`category`,`year`,`isbn`) VALUES('Mark Twain','The Adventures of Tom Sawyer', 'Fiction', '1876','9781598184891'); 
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:26:8)
+Message: UPDATE classics SET author="Herman Melville" WHERE title="Moby Dick"
+
+PID: 47501 Thread ID: 2405398272
+2017-12-3 18:26:10)
+Message: DELETE FROM classics WHERE author="Mark Twain"
+
+PID: 47501 Thread ID: 2397005568
+2017-12-3 18:26:10)

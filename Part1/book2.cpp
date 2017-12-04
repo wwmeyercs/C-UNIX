@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sqlite3.h> 
+
+static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+   int i;
+   for(i=0; i<argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+   char *sql;
+
+   /* Open database */
+   rc = sqlite3_open("test.db", &db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stderr, "Opened database successfully\n");
+   }
+
+   /* Create SQL statement */
+   sql = "INSERT INTO `classics` (`author`,`title`,`category`,`year`,`isbn`) "  \
+         "VALUES('Mark Twain','The Adventures of Tom Sawyer', 'Fiction', '1876','9781598184891'), " \
+         " ('Jane Austen', 'Pride and Prejudice', 'Fiction', '1811', '9780582506206' ), "     \
+         "('Charles Darwin', 'The Origin of Species', 'Non-Fiction', '1856', '9780517123201'), " \
+         "('Charles Dickens', 'The Old Curiosity Shop', 'Fiction', '1841', '9780099533474'), " \
+         "('William Shakespeare', 'Romeo and Juliet', 'Fiction', '1594', '9780192814968'), " \
+         " ('Herman Melville', 'Moby Dick', 'Fiction', '1851', '9780199535729'); ";
+
+   /* Execute SQL statement */
+   rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+   if( rc != SQLITE_OK ){
+      fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }else{
+      fprintf(stdout, "Records created successfully\n");
+   }
+   sqlite3_close(db);
+   return 0;
+}
